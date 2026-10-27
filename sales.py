@@ -77,7 +77,6 @@ if foreign == "y":
 	total_comm_f = calc_foreign_comm(total_sum_f)
 	print()
 	print(f"💲 Общая сумма: ${total_sum_f}")
-<<<<<<< HEAD
 	print(f"💲 Комиссия (3% от суммы): ${total_comm_f}")
 
 if total_comm > 0 and foreign == "y":
@@ -86,6 +85,3 @@ if total_comm > 0 and foreign == "y":
 
 print()
 print(" 💰" * 3)
-=======
-	print(f"💲 Комиссия (3% от суммы): ${total_comm_f}")
->>>>>>> f396946a2c884f554bf6ccbe7367d898f998b1c6

@@ -1,0 +1,7 @@
+a = input()
+b = input()
+
+if set(a) == set(b):
+    print("YES")
+else:
+    print("NO")

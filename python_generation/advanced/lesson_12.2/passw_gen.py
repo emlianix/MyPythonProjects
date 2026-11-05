@@ -2,7 +2,7 @@ import random
 import string
 
 def generate_password(length):
-    excluded = {"l", "I", "1", "o", "O", "0"}
+    excluded = "lI1oO0"
     symbols = [
         char for char in (string.ascii_letters + string.digits)
         if char not in excluded

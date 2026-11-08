@@ -6,6 +6,11 @@ def square(side):
         turtle.left(90)
 
 
+a = int(input())
 turtle.shape("turtle")
 turtle.setheading(75)
-square()
+square(a)
+turtle.setheading(50)
+square(a)
+turtle.setheading(25)
+square(a)

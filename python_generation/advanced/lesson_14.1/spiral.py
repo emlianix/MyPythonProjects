@@ -1,6 +1,7 @@
 import turtle
 
 turtle.shape("turtle")
+turtle.color("blue")
 turtle.speed(2)
 n, step = int(input()), int(input())
 a = step

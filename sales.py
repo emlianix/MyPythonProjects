@@ -3,7 +3,7 @@ from math import floor
 # 🔶 Меню программы
 def start_app():
 	print()
-	print(' /\\_/\\  \n( o.o )\n > ^ < ')
+	print(' /\\_/\\  ', '( o.o )', ' > ^ < ', sep='\n')
 	print()
 		
 		

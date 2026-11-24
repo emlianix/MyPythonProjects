@@ -1,12 +1,6 @@
-from random import choice
+from random import choice, randint
 import time
 import os
-
-def clear_console():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
 
 def show_field(field):
     emojis = {0: '⬜', 1: '❌', 2: '⭕'}
@@ -26,30 +20,47 @@ def ask_for_game(first_time=True):
             'Want to play again?',
             'Do you want to do it again?'
         ]
-
+    return choice(greetings)
+    
 def who_goes_first():
-    return choice(['player', 'comp'])
+    return choice(['player', 'computer'])
+
+def clear_console():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 def get_user_move():
-    pass
+    move = tuple(map(int, input().split()))
+    return move
 
 def get_computer_move():
-    pass
+    x = randint(0, 2)
+    y = randint(0, 2)
+    move = (x, y)
 
 def check_result():
     pass
 
 
 def main_game():
-    question = choice(greetings)  # picked once, so the same question repeats
-
+    first = True
+    
     while True:
-        answer = input(f'{question} y/n ').strip().lower()
+        answer = input(f'{ask_for_game(first)} y/n ').strip().lower()
         if answer == 'y':
-            print('*')  # placeholder: the game starts here
-            return
+            
+            # The game starts here
+            first = False
+            print(f'The {who_goes_first()} goes first ❌')
+            field = [
+                [0, 0, 0], 
+                [0, 0, 0], 
+                [0, 0, 0]
+            ]
+            
         elif answer == 'n':
             exit()
         else:
             print('Try again!')
-
